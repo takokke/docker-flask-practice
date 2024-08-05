@@ -14,6 +14,8 @@ source 仮想環境名/bin/activate
 flask run
 ```
 -pでポート番号、--reloadでファイル変更を監視したりできます。
+また、flask 3.0.xからは--debugでデバッグモードにできます(2系は環境変数を設定するよ)
+
 詳しくは、``flask run --help``
 
 ## ③仮想環境の無効化
@@ -30,4 +32,7 @@ docker build --tag イメージ名:タグ名 .
 ``.``はDockerfileのある階層を指定。
 タグ名を指定しなくても良い。
 
-## ②
+## ②コンテナ実行
+```
+docker run --publish 8000:5000 イメージ名
+```
